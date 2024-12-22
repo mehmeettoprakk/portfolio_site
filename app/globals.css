@@ -2,6 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
+/* DaisyUI ve Tailwind için genel ayarlar */
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif; /* DaisyUI'nin varsayılan fontlarıyla uyumlu */
+  background-color: var(--b1); /* DaisyUI'nin Base-100 teması */
+  color: var(--bc); /* DaisyUI'nin Base Content teması */
+}
+
+/* DaisyUI Tema Destekli Renkler */
+:root {
+  --b1: #ffffff; /* Base Background (Light Mode) */
+  --bc: #000000; /* Base Content (Light Mode) */
+}
+
+[data-theme="dark"] {
+  --b1: #18181b; /* Base Background (Dark Mode) */
+  --bc: #ffffff; /* Base Content (Dark Mode) */
+}
+
+/* Ek Gradient ve Yazı Stilleri */
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, #8b5cf6, #ec4899);
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* DaisyUI Buton ve Hover Ayarları */
+.btn-primary {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+}
+
+/* Transition Ayarları */
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+.bg-base-200 {
+  background-color: #f9fafb; /* Açık bir arka plan rengi */
+}
+
+.text-base-content {
+  color: #1f2937; /* Yazı rengi */
 }
