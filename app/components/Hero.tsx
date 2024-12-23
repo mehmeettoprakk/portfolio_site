@@ -8,7 +8,7 @@ export default function Hero() {
       <h1 className="text-5xl font-bold">
         Hello,{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-          I'm
+          I'm Mehmet
         </span>
       </h1>
       <h2 className="text-4xl font-bold mt-4">

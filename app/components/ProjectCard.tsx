@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 interface ProjectCardProps {
   title: string;
   description: string;
-  link: string;
+  link: string; // Projeye yönlendirme için Next.js'nin sayfa yolu
 }
 
 export default function ProjectCard({
@@ -15,13 +17,12 @@ export default function ProjectCard({
         {title}
       </h3>
       <p className="text-gray-600 dark:text-gray-300 mb-4">{description}</p>
-      <a
+      <Link
         href={link}
-        target="_blank"
-        rel="noopener noreferrer"
+        passHref
         className="text-blue-500 hover:text-blue-700 font-medium transition">
         Projeyi Görüntüle
-      </a>
+      </Link>
     </div>
   );
 }
