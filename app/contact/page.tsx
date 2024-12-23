@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
-    <section className="container mx-auto py-12">
-      <h1 className="text-3xl font-bold text-center mb-8">İletişim</h1>
+    <section className="container mx-auto py-20">
+      <h1 className="text-3xl font-bold text-center mt-20 mb-8">İletişim</h1>
       <form className="max-w-lg mx-auto bg-base-100 p-6 shadow-md rounded-lg">
         <div className="mb-4">
           <label className="block text-sm font-medium mb-1">Adınız</label>

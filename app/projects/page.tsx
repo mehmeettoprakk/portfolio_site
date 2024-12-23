@@ -1,23 +1,24 @@
-"use client";
-import { useState } from "react";
+import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {
   const projects = [
     {
-      title: "Kişisel Portföy Sitesi",
+      title: "Dosya İndirme Yöneticisi",
       description:
-        "Next.js ve React kullanılarak yapılan bir kişisel web sitesi.",
-      link: "https://portfolio-example.com",
+        "Java ve eş zamanlı programlama kullanılarak geliştirilmiş bir dosya indirme yöneticisi.",
+      link: "https://github.com/mehmeettoprakk/Downloader",
     },
     {
-      title: "Blog Uygulaması",
-      description: "Dinamik bir blog platformu.",
-      link: "https://blog-example.com",
+      title: "Youtube Sentiment Analysis",
+      description:
+        "Python ve yapay sinir ağları kullanılarak geliştirilmiş bir duygu analizi uygulaması.",
+      link: "https://github.com/mehmeettoprakk/youtube_sentiment_analysis",
     },
     {
-      title: "E-Ticaret Platformu",
-      description: "Kullanıcı dostu bir e-ticaret uygulaması.",
-      link: "https://ecommerce-example.com",
+      title: "Flappy Bird",
+      description:
+        "C# ve Unity kullanılarak geliştirilmiş bir Flappy Bird klonu.",
+      link: "https://github.com/mehmeettoprakk/Flappy-Bird",
     },
   ];
 
@@ -26,19 +27,12 @@ export default function Projects() {
       <h1 className="text-3xl font-bold text-center mb-6">Projelerim</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
-          <div key={index} className="card shadow-md bg-base-100">
-            <div className="card-body">
-              <h2 className="card-title">{project.title}</h2>
-              <p>{project.description}</p>
-              <a
-                href={project.link}
-                className="btn btn-primary"
-                target="_blank"
-                rel="noopener noreferrer">
-                Projeyi Görüntüle
-              </a>
-            </div>
-          </div>
+          <ProjectCard
+            key={index}
+            title={project.title}
+            description={project.description}
+            link={project.link}
+          />
         ))}
       </div>
     </div>
